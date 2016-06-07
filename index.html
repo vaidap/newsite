@@ -3,6 +3,29 @@
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href=".\font-awesome-4.6.3\css\font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#hidethis1").hide();
+    $("#hidethis2").hide();
+    $("#hidethis3").hide();
+    $("#hide1").click(function(){
+        $("#hidethis1").show(500);
+        $("#hidethis2").hide(500);
+        $("#hidethis3").hide(500);
+    });
+    $("#hide2").click(function(){
+        $("#hidethis1").hide(500);
+        $("#hidethis2").show(500);
+        $("#hidethis3").hide(500);
+    });
+    $("#hide3").click(function(){
+        $("#hidethis1").hide(500);
+        $("#hidethis2").hide(500);
+        $("#hidethis3").show(500);
+    });
+});
+</script>
 	<title>Vaida Plankyte</title>
 </head>
 <style>
@@ -42,7 +65,7 @@ width:100%;
       opacity: 0.4;
       }
 
-h1, h4 {
+h1, h2, h3, h4 {
 	color:white;
 	padding-left:20px;
 	font-weight: lighter;
@@ -53,6 +76,10 @@ h1 {
 	letter-spacing: 10px;
 	display:inline;
 	line-height: 40px;
+}
+
+h3 {
+  letter-spacing: 5px;
 }
 
 .link {
@@ -75,8 +102,22 @@ li {
     padding-right:20px;
     padding-left:20px;
     margin-right:10px;
-    border:1px solid white;
     font-weight: lighter;
+}
+
+.fade2 {
+   border:1px solid white;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade2:hover {
+  border:1px dashed white;
+  }
+
+.accent {
+  color:#e67e22;
 }
 
 i {
@@ -94,24 +135,60 @@ a {
 a:hover {
 	text-decoration:none;
 }
+
+#hidethis2 {
+  line-height:18px;
+}
+
+#hidethis2 h4 {
+  display: inline-block;
+}
+
 </style>
 <body>
 
 <div id="navbar">
 <h1>Vaida Plankyte</h1> 
-<a href="https://twitter.com/underskinnyhrt" class="fade"><i class="fa fa-twitter fa-2x"></i></a>
-<a href="http://vaidap.itch.io/" class="fade"><i class="fa fa-gamepad fa-2x "></i></a>
-<a href="http://vaidacreates.tumblr.com/" class="fade"><i class="fa fa-paint-brush fa-2x "></i></a>
-<a href="https://soundcloud.com/vaidap" class="fade"><i class="fa fa-soundcloud fa-2x "></i></a>
-<a href="https://www.linkedin.com/in/vaida-plankyte-878281106" class="fade"><i class="fa fa-linkedin fa-2x "></i></a>
-<a href="mailto:vaidaplankyte@gmail.com" class="fade"><i class="fa fa-envelope fa-2x "></i></a>
+<a href="https://twitter.com/underskinnyhrt" class="fade"><i class="fa fa-twitter fa-2x  accent"></i></a>
+<a href="http://vaidap.itch.io/" class="fade"><i class="fa fa-gamepad fa-2x  accent"></i></a>
+<a href="http://vaidacreates.tumblr.com/" class="fade"><i class="fa fa-paint-brush fa-2x  accent"></i></a>
+<a href="https://soundcloud.com/vaidap" class="fade"><i class="fa fa-soundcloud fa-2x  accent"></i></a>
+<a href="https://www.linkedin.com/in/vaida-plankyte-878281106" class="fade"><i class="fa fa-linkedin fa-2x  accent"></i></a>
+<a href="mailto:vaidaplankyte@gmail.com" class="fade"><i class="fa fa-envelope fa-2x  accent"></i></a>
 <h4>Independent games developer and Computer Science student.</h4>
 
+<div id="hidethis1">
+<h2 class="accent">Interactive Works</h2>
+<h4 class="accent">All my games can be found on <a href="https://vaidap.itch.io" class="fade">itch.io</a>.</h4>
+</div>
+
+<div id="hidethis2">
+<h2 class="accent">Speaker &amp; Features</h2>
+<h3>Microtalks:</h3>
+<h4><span class="accent">"One Game A Month"</span> @SCREENSHAKE 2016 (Antwerp)</h4>
+<h4><span class="accent">"I Really Want To Talk To You But I Don't Know How So Here, Have A Game"</span> @Indievelopment 2016 (Utrecht), Indie Game Salon (Antwerp)</h4>
+<br/>
+<h3>Features:</h3>
+<h4><span class="accent">Talks With My Mom:</span> <a href="http://www.kotaku.co.uk/2015/09/09/how-games-fail-and-succeed-at-depicting-female-sexuality" class="fade">Kotaku</a>, <a href="http://www.vice.com/en_uk/read/what-video-games-have-to-say-about-the-more-traumatic-side-of-parent-children-relationships-840" class="fade">VICE</a></h4>
+<h4><span class="accent">There Is A Light That Never Goes Out:</span> <a href="http://www.scotsman.com/news/how-scots-video-games-are-addressing-mental-health-1-3910327" class="fade">The Scotsman</a></h4>
+<h3>Podcasts/Interviews:</h3>
+<a href="http://femhype.com/2016/03/04/blanket-fort-chats-game-making-with-vaida-plankyte/" class="fade"><h4>Blanket Fort Chats</h4></a>
+<a href="http://www.gameenginestart.com/podcast/lets-talk-to-vaida/" class="fade"><h4>Game Engine Start</h4></a>
+<a href="http://gamehour.be/podcasts/listen/111" class="fade"><h4>Gamehour (at ~57mins)</h4></a>
+</div>
+
+<div id="hidethis3">
+<h2 class="accent">About me</h1>
+<h4><span class="accent">18, Edinburgh.</span></h4>
+<h4><span class="accent">I enjoy:</span> watching too many shows at the same time</h4>
+</div>
+
+
 <ul>
-  <li><a href="default.asp">CV</a></li>
-  <li><a href="news.asp">Interactive Works</a></li>
-  <li><a href="about.asp">Speaker &amp; Installations</a></li>
-  <li><a href="about.asp">About me</a></li>
+  <a href="#" id="hide1"><li class="fade2">Interactive Works</li></a>
+  <a href="#" id="hide2"><li class="fade2">Speaker &amp; Features</li></a>
+  <a href="#" id="hide3"><li class="fade2">About me</li></a>  
+  <a href="CV.pdf"><li class="fade2">CV</li></a>
 </ul>
 </div>
 </body>
