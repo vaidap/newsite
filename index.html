@@ -15,6 +15,30 @@
     $("#hidethis1").hide();
     $("#hidethis2").hide();
     $("#hidethis3").hide();
+
+   /* $('html').click(function(e) {                    
+   if(!$(e.target).hasClass('nonclick') )
+   {
+      $("#hidethis1").hide();
+    $("#hidethis2").hide();
+    $("#hidethis3").hide();               
+   }
+}); */
+// thank you stack overflow
+  $('html').click(function(evt){    
+       if(evt.target.id == "navbar")
+          return;
+       //For descendants of menu_content being clicked, remove this check if you do not want to put constraint on descendants.
+       if($(evt.target).closest('#navbar').length)
+          return;             
+
+      //Do processing of click event here for every element except with id menu_content
+      $("#hidethis1").hide(500);
+    $("#hidethis2").hide(500);
+    $("#hidethis3").hide(500);
+
+});
+
     $("#hide1").click(function(){
         $("#hidethis1").show(500);
         $("#hidethis2").hide(500);
@@ -30,12 +54,13 @@
         $("#hidethis2").hide(500);
         $("#hidethis3").show(500);
     });
+
 });
 </script>
 </head>
 <style>
 html { 
-  background: url("cover.JPG") no-repeat center center fixed;
+  background: url("dead4.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,7 +76,6 @@ body {
 
 #navbar {
 background-color:rgba(0,0,0,0.8);
-margin:0px;
 padding-top:20px;
 padding-bottom:10px;
 position: absolute;
@@ -78,13 +102,13 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	letter-spacing: 10px;
+	letter-spacing: 5px;
 	display:inline;
 	line-height: 40px;
 }
 
 h3 {
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
 
 .link {
@@ -122,7 +146,7 @@ li {
   }
 
 .accent {
-  color:#e67e22;
+  color:#F5CD91;
 }
 
 i {
@@ -150,7 +174,18 @@ a:hover {
 }
 
 #hidethis1 h4 {
-  display: inline-block;
+ display: inline-block;
+ padding-right:10px;
+}
+
+@media (max-height: 610px) {
+  #navbar {
+position: absolute;
+top:0;
+bottom: auto;
+min-height: 100vh; 
+}
+
 }
 
 </style>
@@ -170,12 +205,17 @@ a:hover {
 <div id="hidethis1">
 <h2 class="accent">Interactive Works</h2>
 
-<h4 class="accent">All my games can be found on <a href="https://vaidap.itch.io" class="fade">itch.io</a>.</h4>
+<h4>This is a selection of my games; the full list can be found on <a href="https://vaidap.itch.io" class="fade">itch.io</a>.</h4>
 <h3>Games:</h3>
-<h4><span class="accent">HORIZON</span>, a one-way conversation about what games don't have to be</h4>
-<h4><span class="accent">BRR</span>, where you are a robot listening to an old friend</h4>
+<h4><a href="https://vaidap.itch.io/horizon" class="fade"><span class="accent">HORIZON</span></a>, a one-way conversation about what games don't have to be</h4>
+<h4><a href="https://vaidap.itch.io/brr" class="fade"><span class="accent">BRR</span></a>, where you are a robot listening to an old friend</h4>
+<h4><a href="https://vaidap.itch.io/ow" class="fade"><span class="accent">~Ow~</span></a>, a competitive cuddling simulator</h4>
+<h4><a href="https://vaidap.itch.io/a-survival-game" class="fade"><span class="accent">A Survival Game</span></a>, about fireplaces and expectations</h4>
+<h4><a href="https://vaidap.itch.io/safe-place-for-dust" class="fade"><span class="accent">Safe Place for Dust</span></a>, a musical exploration between planets</h4>
+<h4><a href="https://vaidap.itch.io/there-is-a-light-that-never-goes-out" class="fade"><span class="accent">There is a Light That Never Goes Out</span></a>, anxiety through game mechanics</h4>
 <h3>Interactive Fiction:</h3>
 <h4><span class="accent">WE ARE KINGS</span>, about mental palaces and relationships</h4>
+<h4><a href="https://vaidap.itch.io/wall" class="fade"><span class="accent">Wall</span>, 20 years of a person's life through their apartment wall</h4>
 </div>
 
 <div id="hidethis2">
@@ -197,8 +237,9 @@ a:hover {
 <h2 class="accent">About me</h1>
 <h4><span class="accent">18, Edinburgh.</span></h4>
 <h4>I enjoy making <span class="accent">personal games</span> that focus on narration and minimalistic gameplay.</h4>
+<h4>I am interested in getting better at <span class="accent">graphic design </span>and <span class="accent">web development and design</span>.</h4>
 <h4>I post<span class="accent"> writing, photography and postmortems </span>on my creative blog.</h4>
-<h4>I<span class="accent"> enjoy</span> watching too many shows at the same time and always end up setting unrealistic expectations for myself (regarding the work I do, not the shows. Well. That too).</h4>
+<h4>I<span class="accent"> enjoy</span> watching too many shows at the same time, long hugs and oreo flavoured ice cream.</h4>
 <h4>You can <span class="accent">contact me </span>through <a href="https://twitter.com/underskinnyhrt" class="fade">twitter</a> or <a href="mailto:vaidaplankyte@gmail.com" class="fade"> email</a>.</h4>
 </div>
 
