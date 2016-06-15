@@ -54,6 +54,11 @@
         $("#hidethis2").hide(500);
         $("#hidethis3").show(500);
     });
+    $("#name").click(function(){
+        $("#hidethis1").hide(500);
+        $("#hidethis2").hide(500);
+        $("#hidethis3").hide(500);
+    });
 
 });
 </script>
@@ -61,14 +66,11 @@
 <style>
 html { 
   background: url("dead4.jpg") no-repeat center center fixed;
-  -webkit-background-size: 100%; 
-    -moz-background-size: 100%; 
-    -o-background-size: 100%; 
-    background-size: 100%; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  min-height: 100%;
 }
 
 body {
@@ -87,7 +89,18 @@ bottom:0;
 width:100%;
 }
 
-.fade {
+.fade3 {
+   opacity:1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   }
+
+.fade3:hover {
+      opacity:0.8;
+      }
+
+      .fade {
    opacity: 1;
    transition: opacity .25s ease-in-out;
    -moz-transition: opacity .25s ease-in-out;
@@ -174,17 +187,21 @@ a:hover {
 }
 
 #hidethis3 {
-  padding-right:10px;
+  padding-right:12px;
 }
 
 #hidethis2 h4 {
   display: inline-block;
-   padding-right:10px;
+   padding-right:12px;
 }
 
 #hidethis1 h4 {
  display: inline-block;
- padding-right:10px;
+ padding-right:12px;
+}
+
+#description {
+padding-right:12px;
 }
 
 @media (max-height: 610px) {
@@ -201,7 +218,7 @@ min-height: 100vh;
 <body>
 
 <div id="navbar">
-<h1>Vaida Plankyte</h1> 
+<a href="#" id="name" class="fade3"><h1>Vaida Plankyte</h1></a>
 <a href="https://twitter.com/underskinnyhrt" class="fade"><i class="fa fa-twitter fa-2x  accent"></i></a>
 <a href="http://vaidap.itch.io/" class="fade"><i class="fa fa-gamepad fa-2x  accent"></i></a>
 <a href="http://vaidacreates.tumblr.com/" class="fade"><i class="fa fa-paint-brush fa-2x  accent"></i></a>
@@ -209,7 +226,7 @@ min-height: 100vh;
 <a href="https://www.behance.net/vaidaplankyte" class="fade"><i class="fa fa-behance fa-2x  accent"></i></a>
 <a href="https://www.linkedin.com/in/vaida-plankyte-878281106" class="fade"><i class="fa fa-linkedin fa-2x  accent"></i></a>
 <a href="mailto:vaidaplankyte@gmail.com" class="fade"><i class="fa fa-envelope fa-2x  accent"></i></a>
-<h4>Independent games developer and Computer Science student.</h4>
+<h4 id="description">Independent games developer and Computer Science student.</h4>
 
 <div id="hidethis1">
 <h2 class="accent">Interactive Works</h2>
